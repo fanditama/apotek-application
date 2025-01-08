@@ -6,13 +6,13 @@ use Livewire\Component;
 
 class AdminDashboard extends Component
 {
-    public $current_url;
+    public $currentUrl;
 
     public function render()
     {
         $current_url = url()->current();
         $explode_url = explode('/', $current_url);
-        $this->current_url = $explode_url[3]. ' ' . $explode_url[4];
+        $this->currentUrl = $explode_url[3]. ' ' . $explode_url[4];
 
         return view('livewire.admin-dashboard')->layout('admin-layout');
     }
