@@ -1,3 +1,3 @@
 <div>
-    <livewire:bread-crumb :url='$current_url' />
+    <livewire:bread-crumb :url='$currentUrl' />
 </div>

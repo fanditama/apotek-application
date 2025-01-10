@@ -7,12 +7,14 @@
         <title>Apotek App</title>
 
         @vite('resources/css/app.css')
-        @vite('resources/js/app.js')
+        
     </head>
     <body>
         <livewire:header />
         <livewire:hero-section />
         <livewire:product-section />
         <livewire:footer />
+
+        @vite('resources/js/app.js')
     </body>
 </html>
