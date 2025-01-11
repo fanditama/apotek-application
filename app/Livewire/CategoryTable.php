@@ -26,6 +26,15 @@ class CategoryTable extends Component
         $this->sortDir = 'ASC';
     }
 
+    public function delete($id)
+    {
+        $category = Category::find($id);
+
+        $category->delete();
+
+        return $this->redirect('/categories', navigate:true);
+    }
+
     public function render()
     {
         $current_url = url()->current();
