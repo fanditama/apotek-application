@@ -15,6 +15,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/product/{product_id}/details', ProductDetail::class);
+
 Route::group(['middleware' => 'admin'], function() {
     Route::get('/product/details', ProductDetail::class);
 
