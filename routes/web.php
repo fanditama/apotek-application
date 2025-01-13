@@ -9,6 +9,7 @@ use App\Livewire\ManageOrders;
 use App\Livewire\ManageCategories;
 use App\Livewire\ManageProducts;
 use App\Livewire\ProductDetail;
+use App\Livewire\ShoppingCartComponent;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -16,6 +17,8 @@ Route::get('/', function () {
 });
 
 Route::get('/product/{product_id}/details', ProductDetail::class);
+
+Route::get('/shopping-cart',ShoppingCartComponent::class)->name('shopping-cart');
 
 Route::group(['middleware' => 'admin'], function() {
     Route::get('/product/details', ProductDetail::class);
