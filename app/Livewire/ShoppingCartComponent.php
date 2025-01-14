@@ -24,10 +24,11 @@ class ShoppingCartComponent extends Component
         $this->calculateTotals();
     }
 
-    //calculate the totals
     public function calculateTotals()
     {
-        $this->subtotal = $this->cartItems->sum(function($item) {
+        $cartItems = collect($this->cartItems);
+
+        $this->subtotal = $cartItems->sum(function($item) {
             return $item->quantity * $item->product->price;
         });
         $this->vat = $this->subtotal * 0.1; // 10% VAT example
