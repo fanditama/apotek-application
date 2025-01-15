@@ -3,6 +3,7 @@
 use App\Livewire\AddCategoryForm;
 use App\Livewire\AddProductForm;
 use App\Livewire\AdminDashboard;
+use App\Livewire\AllProducts;
 use App\Livewire\EditCategory;
 use App\Livewire\EditProduct;
 use App\Livewire\ManageOrders;
@@ -17,6 +18,8 @@ Route::get('/', function () {
 });
 
 Route::get('/product/{product_id}/details', ProductDetail::class);
+
+Route::get('/all/products', AllProducts::class);
 
 Route::get('/shopping-cart',ShoppingCartComponent::class)->name('shopping-cart');
 

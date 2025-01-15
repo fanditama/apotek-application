@@ -17,11 +17,11 @@
         <nav aria-label="Global">
           <ul class="flex items-center gap-6 text-sm">
             <li>
-              <a class="text-gray-500 transition hover:text-gray-500/75" href="/"> Home </a>
+              <a class="text-gray-500 {{Request::is('/') ? 'text-gray-700 font-bold' : ''}} transition hover:text-gray-500/75" wire:navigate href="/"> Home </a>
             </li>
 
             <li>
-              <a class="text-gray-500 transition hover:text-gray-500/75" href="#"> Explore More </a>
+              <a class="text-gray-500 transition {{Request::is('all/products') ? 'text-gray-700 font-bold' : ''}} transition hover:text-gray-500/75" wire:navigate href="/all/products"> Explore More </a>
             </li>
 
             <li>
